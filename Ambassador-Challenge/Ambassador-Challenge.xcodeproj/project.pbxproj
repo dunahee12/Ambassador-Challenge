@@ -14,6 +14,11 @@
 		3E485EA41B323B6C00136E14 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E485EA31B323B6C00136E14 /* Images.xcassets */; };
 		3E485EA71B323B6C00136E14 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E485EA51B323B6C00136E14 /* LaunchScreen.xib */; };
 		3E485EB31B323B6C00136E14 /* Ambassador_ChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E485EB21B323B6C00136E14 /* Ambassador_ChallengeTests.swift */; };
+		3E485EBD1B32411D00136E14 /* LinkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E485EBC1B32411D00136E14 /* LinkCell.swift */; };
+		3E485EBF1B32461B00136E14 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E485EBE1B32461B00136E14 /* CoreDataManager.swift */; };
+		3E485EC31B32474500136E14 /* AddNewLinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E485EC21B32474500136E14 /* AddNewLinkViewController.swift */; };
+		3E485ECA1B32571200136E14 /* Link.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E485EC91B32571200136E14 /* Link.m */; };
+		3E485ECF1B325E9700136E14 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E485ECE1B325E9700136E14 /* LandingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +43,13 @@
 		3E485EAC1B323B6C00136E14 /* Ambassador-ChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ambassador-ChallengeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E485EB11B323B6C00136E14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3E485EB21B323B6C00136E14 /* Ambassador_ChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ambassador_ChallengeTests.swift; sourceTree = "<group>"; };
+		3E485EBC1B32411D00136E14 /* LinkCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkCell.swift; sourceTree = "<group>"; };
+		3E485EBE1B32461B00136E14 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		3E485EC21B32474500136E14 /* AddNewLinkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewLinkViewController.swift; sourceTree = "<group>"; };
+		3E485EC41B324F7400136E14 /* Ambassador-Challenge-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Ambassador-Challenge-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		3E485EC81B32571200136E14 /* Link.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Link.h; sourceTree = "<group>"; };
+		3E485EC91B32571200136E14 /* Link.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Link.m; sourceTree = "<group>"; };
+		3E485ECE1B325E9700136E14 /* LandingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,12 +91,15 @@
 		3E485E961B323B6C00136E14 /* Ambassador-Challenge */ = {
 			isa = PBXGroup;
 			children = (
+				3E485EC41B324F7400136E14 /* Ambassador-Challenge-Bridging-Header.h */,
+				3E485ED01B326CE800136E14 /* Core Data */,
+				3E485ED11B326E5400136E14 /* Home */,
 				3E485E991B323B6C00136E14 /* AppDelegate.swift */,
-				3E485E9E1B323B6C00136E14 /* ViewController.swift */,
+				3E485EC21B32474500136E14 /* AddNewLinkViewController.swift */,
+				3E485ECE1B325E9700136E14 /* LandingViewController.swift */,
 				3E485EA01B323B6C00136E14 /* Main.storyboard */,
 				3E485EA31B323B6C00136E14 /* Images.xcassets */,
 				3E485EA51B323B6C00136E14 /* LaunchScreen.xib */,
-				3E485E9B1B323B6C00136E14 /* Ambassador_Challenge.xcdatamodeld */,
 				3E485E971B323B6C00136E14 /* Supporting Files */,
 			);
 			path = "Ambassador-Challenge";
@@ -113,6 +128,26 @@
 				3E485EB11B323B6C00136E14 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3E485ED01B326CE800136E14 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				3E485E9B1B323B6C00136E14 /* Ambassador_Challenge.xcdatamodeld */,
+				3E485EBE1B32461B00136E14 /* CoreDataManager.swift */,
+				3E485EC81B32571200136E14 /* Link.h */,
+				3E485EC91B32571200136E14 /* Link.m */,
+			);
+			name = "Core Data";
+			sourceTree = "<group>";
+		};
+		3E485ED11B326E5400136E14 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				3E485E9E1B323B6C00136E14 /* ViewController.swift */,
+				3E485EBC1B32411D00136E14 /* LinkCell.swift */,
+			);
+			name = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,8 +251,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E485E9F1B323B6C00136E14 /* ViewController.swift in Sources */,
+				3E485ECA1B32571200136E14 /* Link.m in Sources */,
+				3E485ECF1B325E9700136E14 /* LandingViewController.swift in Sources */,
+				3E485EC31B32474500136E14 /* AddNewLinkViewController.swift in Sources */,
 				3E485E9D1B323B6C00136E14 /* Ambassador_Challenge.xcdatamodeld in Sources */,
 				3E485E9A1B323B6C00136E14 /* AppDelegate.swift in Sources */,
+				3E485EBF1B32461B00136E14 /* CoreDataManager.swift in Sources */,
+				3E485EBD1B32411D00136E14 /* LinkCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,9 +386,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Ambassador-Challenge/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Ambassador-Challenge-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -356,9 +399,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Ambassador-Challenge/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Ambassador-Challenge-Bridging-Header.h";
 			};
 			name = Release;
 		};
